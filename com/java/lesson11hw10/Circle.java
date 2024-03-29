@@ -1,4 +1,4 @@
-package src.lesson11hw10;
+package lesson11hw10;
 
 public class Circle extends Shape {
     private double radius;

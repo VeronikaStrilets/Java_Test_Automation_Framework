@@ -1,4 +1,4 @@
-package src.lesson12hw11;
+package lesson12hw11;
 
 public class Product {
     private String name;

@@ -1,4 +1,4 @@
-package src.lesson11hw10;
+package lesson11hw10;
 
 public class Triangle extends Shape {
     private double base;
