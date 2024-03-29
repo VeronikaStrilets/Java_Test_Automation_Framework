@@ -10,6 +10,6 @@ public class Sorting implements Comparator<String> {
         if (lengthComparison != 0) {
             return lengthComparison;
         }
-        return s1.compareTo(s2); // Сравниваем лексикографически, если длины равны
+        return s1.compareTo(s2);
     }
 }
