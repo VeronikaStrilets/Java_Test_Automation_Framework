@@ -23,15 +23,17 @@ public class OrderProcessor {
     }
 
     // Display all orders
-    public void displayAllOrders() {
+    public String displayAllOrders() {
+        StringBuilder result = new StringBuilder();
         if (!orderQueue.isEmpty()) {
-            System.out.println("Orders in the queue:");
+            result.append("Orders in the queue:\n");
             for (Order order : orderQueue) {
-                System.out.println(order);
+                result.append(order).append("\n");
             }
         } else {
-            System.out.println("The queue is empty. No orders to display.");
+            result.append("The queue is empty. No orders to display.");
         }
+        return result.toString();
     }
 
     // Check if queue is empty
