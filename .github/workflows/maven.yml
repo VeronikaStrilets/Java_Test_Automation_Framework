@@ -44,4 +44,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: allure-results
-        path: com/target/allure-results
+        path: target/allure-results
