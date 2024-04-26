@@ -15,8 +15,8 @@ on:
     branches: [ "main" ]
 
 permissions:
-  actions: read
-  contents: read
+  actions: write
+  contents: write
   packages: write
 
 jobs:
