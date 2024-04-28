@@ -120,6 +120,7 @@
                 </executions>
                 <configuration>
                     <reportVersion>2.14.0</reportVersion>
+                    <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
                 </configuration>
             </plugin>
         </plugins>
