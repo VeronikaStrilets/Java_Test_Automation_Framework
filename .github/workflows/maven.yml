@@ -44,7 +44,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: allure-results
-        path: target/allure-results
+        path: /Users/Nika/IdeaProjects/Java_Test_Automation_Framework/target/allure-results
 
     - name: Generate Allure report
       run: mvn allure:report
