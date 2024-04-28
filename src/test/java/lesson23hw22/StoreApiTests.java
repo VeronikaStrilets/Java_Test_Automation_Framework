@@ -1,10 +1,10 @@
 package lesson23hw22;
 
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.reset;
 
 import io.restassured.http.ContentType;
 
@@ -12,14 +12,9 @@ public class StoreApiTests {
 
     private static final String BASE_URL = "https://petstore.swagger.io/v2";
 
-    @BeforeClass
-    public void setUp() {
-        // Настройка, выполняемая перед запуском всех тестов
-        System.out.println("Starting the tests...");
-    }
-
     @AfterClass
     public void tearDown() {
+        reset();
         System.out.println("Tests completed.");
     }
 
