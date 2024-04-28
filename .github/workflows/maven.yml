@@ -49,3 +49,6 @@ jobs:
     - name: List results of Allure
       if: success()
       run: ls -la target/allure-results
+
+    - name: Clear Allure results
+      run: rm -rf target/allure-results/*
