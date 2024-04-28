@@ -10,9 +10,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "**" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "**" ]
 
 permissions:
   actions: write
@@ -45,10 +45,11 @@ jobs:
       with:
         name: allure-results
         path: target/allure-results
-    
+
     - name: List results of Allure
       if: success()
       run: ls -la target/allure-results
 
     - name: Clear Allure results
+      if: success()
       run: rm -rf target/allure-results/*
