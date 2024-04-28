@@ -2,8 +2,12 @@
 <suite name="Test">
     <test name="OrderProcessorTest">
         <classes>
-            <class name="lesson17hw16.OrderProcessorTest">
-            </class>
+            <class name="lesson17hw16.OrderProcessorTest" />
+        </classes>
+    </test>
+    <test name="StoreApiTests">
+        <classes>
+            <class name="lesson27hw25.StoreApiTests" />
         </classes>
     </test>
 </suite>
