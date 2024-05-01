@@ -25,16 +25,16 @@ public class SelenideFormPage {
     private SelenideElement submitButton = $("#submit");
 
     public void fillForm() {
-        scrollAndSet(firstNameField, "Veronika");
-        scrollAndSet(lastNameField, "Strilets");
-        scrollAndSet(userEmailField, "veronika.strilets@gmail.com");
+        scrollAndSetValue(firstNameField, "Veronika");
+        scrollAndSetValue(lastNameField, "Strilets");
+        scrollAndSetValue(userEmailField, "veronika.strilets@gmail.com");
         safeClick(radioButtonFemale);
-        scrollAndSet(userMobileNumberField, "1234567890");
+        scrollAndSetValue(userMobileNumberField, "1234567890");
         setDate("08", "June", "1991");
-        scrollAndSet(subjectsInput, "Maths");
+        scrollAndSetValue(subjectsInput, "Maths");
         subjectsInput.pressEnter();
         safeClick(hobbiesCheckboxReading);
-        scrollAndSet(currentAddressField, "123 Main St, City, Country");
+        scrollAndSetValue(currentAddressField, "123 Main St, City, Country");
         scrollAndUpload(uploadPictureButton, "test.png");
         scrollAndSetValue(stateDropdown, "NCR");
         stateDropdown.pressEnter();
@@ -51,7 +51,7 @@ public class SelenideFormPage {
 
     }
 
-    private void scrollAndSet(SelenideElement element, String value) {
+    private void scrollAndSetValue(SelenideElement element, String value) {
         element.scrollIntoView(true);
         element.setValue(value);
     }
@@ -59,11 +59,6 @@ public class SelenideFormPage {
     private void scrollAndUpload(SelenideElement element, String filePath) {
         element.scrollIntoView(true);
         element.uploadFromClasspath(filePath);
-    }
-
-    private void scrollAndSetValue(SelenideElement element, String value) {
-        element.scrollIntoView(true);
-        element.setValue(value);
     }
 
     private void setDate(String day, String month, String year) {
