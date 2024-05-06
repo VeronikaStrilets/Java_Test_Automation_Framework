@@ -43,7 +43,7 @@ public class SelenideFormPage {
         safeClick(submitButton);
 
         try {
-            $("div.modal-title.h4#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+            $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
             System.out.println("The form is successfully submitted.");
         } catch (Exception e) {
             System.err.println("Fail to submit the form: " + e.getMessage());
